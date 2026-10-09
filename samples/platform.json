@@ -1,0 +1,23 @@
+{
+  "name": "Central Compute Isolation Programme",
+  "owner": "Functional Safety Manager",
+  "computePlatform": "Vehicle HPC A",
+  "hypervisor": "Type-1 Hypervisor",
+  "description": "Illustrative mixed-criticality platform with a safety control partition and a QM infotainment aggressor.",
+  "exampleSafetyPartition": {
+    "name": "Motion Control",
+    "criticality": "ASIL-D",
+    "cpuBudgetPct": 35,
+    "memoryBudgetMb": 512,
+    "deadlineMs": 10,
+    "trustDomain": "Safety"
+  },
+  "exampleAggressor": {
+    "name": "Infotainment",
+    "criticality": "QM",
+    "cpuBudgetPct": 60,
+    "memoryBudgetMb": 2048,
+    "deadlineMs": 100,
+    "trustDomain": "Consumer"
+  }
+}
